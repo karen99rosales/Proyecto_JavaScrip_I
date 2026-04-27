@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Presupuesto - [Karen]</title>
+        <script src="js/app.js"></script>
+        <script src="js/Dato.js"></script>
+        <script src="js/Egreso.js"></script>
+        <script src="js/Ingreso.js"></script>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+
+    <body>
+        
+        <!-- Cabecera -->
+         <div class="cabecero">
+            <div class="presupuesto">
+                <div class="presupuesto_titulo">
+                    <h1>Presupuesto Disponible</h1>
+                </div>
+                <div class="presupuesto_valor">
+                   <p>+2,000.00</p> 
+                </div>
+                <div class="presupuesto_ingreso limpiarEstilos">
+                    <div class="presupuesto_ingreso--texto">
+                       <p>Ingresos</p> 
+                    </div>
+                    <div class="derecha">
+                        <div class="presupuesto_ingreso—valor">
+                            <p>+4,000.00</p>
+                        </div>
+                        <div class="presupuesto_ingreso--porcentaje">
+                            <p> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="presupuesto_egreso limpiarEstilos">
+                    <div class="presupuesto_egreso--texto">
+                       <p>Egresos</p> 
+                    </div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="presupuesto_egreso--valor">
+                            <p>-1,900.00</p>
+                        </div>
+                        <div class="presupuesto_egreso—porcentaje">
+                            <p>45%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+        <!-- Formulario -->
+         <form id="forma">
+            <div class="agregar">
+                <div class="agregar_contenedor">
+                    <select class="agregar_tipo" id="tipo">
+                        <option value="ingreso" selected>+</option>
+                        <option value="egreso">-</option>
+                    </select>
+                    <input type="text" class="agregar_descripcion" id="descripcion" placeholder="Agregar Descripción">
+                    <input type="number"  class="agregar_valor" id="valor" placeholder="Valor " step="any">
+                    <button type="submit" class="agregar_btn"><ion-icon name="checkmark-circle-outline"></ion-icon>Agregar</button>
+                </div>
+
+            </div>
+
+         </form>
+        <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+
+        <div class="contenedor limpiarEstilos">
+            <div class="ingreso">
+                <h2 class="ingreso_titulo">Ingresos</h2>
+                <div id="lista-ingresos">
+                    <div class="elemento limpiarEstilos">
+                        <div class="elemento_descripcion">
+                            <p>salario</p>
+                        </div>
+                        <div class="derecha limpiarEstilos">
+                            <div class="elemento_valor">
+                                <p>+2,200.00</p>
+                            </div>
+                            <div class="elemento_eliminar">
+                                <button class="elemento_eliminar_btn"><ion-icon name="close-circle-outline"></ion-icon></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elemento limpiarEstilos">
+                        <div class="elemento_descripcion">
+                            <p>Venta Coche</p>
+                        </div>
+                        <div class="derecha limpiarEstilos">
+                            <div class="elemento_valor">
+                                <p>+1,500.00</p>
+                            </div>
+                            <div class="elemento_eliminar">
+                                <button class="elemento_eliminar_btn"><ion-icon name="close-circle-outline"></ion-icon></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="egreso">
+                <h2 class="egreso_titulo">Egresos</h2>
+                <div id="lista-egresos">
+                    <div class="elemento limpiarEstilos">
+                        <div class="elemento_descripcion">
+                            <p>Renta Departamento</p>
+                        </div>
+                        <div class="derecha limpiarEstilos">
+                            <div class="elemento_valor">
+                                <p>-900.00</p>
+                            </div>
+                            <div class="elemento_porcentaje">
+                                <p>21%</p>
+                            </div>
+                            <div class="elemento_eliminar">
+                                <button class="elemento_eliminar_btn"><ion-icon name="close-circle-outline"></ion-icon></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elemento limpiarEstilos">
+                        <div class="elemento_descripcion">
+                            <p>Ropa</p>
+                        </div>
+                        <div class="derecha limpiarEstilos">
+                            <div class="elemento_valor">
+                                <p>-400.00</p>
+                            </div>
+                            <div class="elemento_porcentaje">
+                                <p>9%</p>
+                            </div>
+                            <div class="elemento_eliminar">
+                                <button class="elemento_eliminar_btn"><ion-icon name="close-circle-outline"></ion-icon></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
