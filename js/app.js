@@ -1,5 +1,13 @@
-let egresos = {renta:900, ropa:400}
-let ingresos = {salario:2000, venta:500}
+let ingresos = [
+    new Ingreso('Salario', 20000),
+    new Ingreso('Venta auto', 50000)
+];
+
+const egresos = [
+    new Egreso('Renta', 4000),
+    new Egreso('Ropa', 800)
+];
+
 const cargarCabecero = () => {
     const presupuesto = totalIngresos() - totalEgresos();
     const porcentajeEgreso = totalEgresos() / totalIngresos();
@@ -8,7 +16,7 @@ const cargarCabecero = () => {
 const totalIngresos = () => {
     let totalIngreso = 0;
     for (const ingreso of Object.values(ingresos)) {
-        totalIngreso += ingreso;
+        totalIngreso += ingreso.valor;
     }
     return totalIngreso;
 }
@@ -16,17 +24,17 @@ const totalIngresos = () => {
 const totalEgresos = () => {
     let totalEgreso = 0;
     for (const egreso of Object.values(egresos)) {
-        totalEgreso += egreso;
+        totalEgreso += egreso.valor;
     }
     return totalEgreso;
 }
 
 
-// cargarCabecero();
-// // console.log(presupuesto);
-// // console.log(porcentajeEgreso);
-// console.log(totalIngresos());
-// console.log(totalEgresos());
+cargarCabecero();
+// console.log(presupuesto);
+// console.log(porcentajeEgreso);
+console.log(totalIngresos());
+console.log(totalEgresos());
 
 const formatoMoneda = (valor) => {
     return valor.toLocaleString('es-MX', {
