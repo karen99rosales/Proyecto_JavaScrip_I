@@ -3,13 +3,13 @@ const d = document;
 let ingresos = [
     new Ingreso('Salario', 20000),
     new Ingreso('Venta auto', 50000),
-    new Ingreso('Algo', 2000)
+    new Ingreso('Ventas garage', 2000)
 ];
 
 const egresos = [
     new Egreso('Renta', 4000),
     new Egreso('Ropa', 800),
-    new Egreso('Un dato mas', 600)
+    new Egreso('Medicamento', 600)
 ];
 
 
